@@ -30,8 +30,8 @@ const LogIn = () => {
             withCredentials: true,
           },
         )
-        .then((response) => {
-          mutate(response.data);
+        .then(() => {
+          mutate(false, true);
         })
         .catch((error) => {
           setLogInError(error.response?.data?.statusCode === 401);
