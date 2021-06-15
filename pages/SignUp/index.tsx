@@ -68,7 +68,7 @@ const SignUp = () => {
   // 이 SWR을 이용해서 로그인을 판별하는 함수는 반드시 이 위치에 있어야 한다.
   // return은 항상 hooks보다 아래에 있어야 한다.
   if (data) {
-    return <Redirect to="/workspace/channel" />;
+    return <Redirect to="/workspace/slaect/channel/일반" />;
   }
 
   return (

@@ -6,7 +6,8 @@ import { Dispatch, SetStateAction, useCallback, useState } from 'react';
 // 변수는 알아서 추론하기 때문에 내버려두고, 스스로 못할 때 타입을 주자.
 
 // 매개변수를 any타입으로 주면, return값의 value(첫번째 값)값도 any타입으로 자동으로 바뀌지가 않는다.)
-type ReturnTypes<T = any> = [T, (e: any) => void, Dispatch<SetStateAction<T>>];
+type Handler = (e: any) => void;
+type ReturnTypes<T = any> = [T, Handler, Dispatch<SetStateAction<T>>];
 
 const useInput = <T = any>(initialData: T): ReturnTypes<T> => {
   // 제너릭 써주자. any말고
